@@ -10,6 +10,6 @@
 
 
 <h3>Gameplay</h3>
-<img src="https://github.com/Razibs/AndoridTicTacToe/blob/master/screenshots/gameplay.png" width="220">
+<img src="https://github.com/Razibs/AndoridTicTacToe/blob/master/screenshots/gameplay1.png" width="220">
 
 
