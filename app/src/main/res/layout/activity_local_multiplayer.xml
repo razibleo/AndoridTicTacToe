@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/title_background"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
+
+    <TextView
+        android:id="@+id/topText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="20dp"
+        tools:text="Next round begins in 5...." />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="10"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="9">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/p1RoundResultTextView"
+                    android:textSize="25dp"
+                    tools:text="WIN!"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/player1CircularImageView"
+                    android:layout_below="@id/p1RoundResultTextView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="3dp"
+                    android:src="@drawable/stock_man_1"
+                    app:civ_border_color="@color/reddish_pink"
+                    app:civ_border_width="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name_tag1"
+                    android:layout_below="@id/player1CircularImageView"
+                    android:background="@drawable/name_tag_reddish_pink"
+                    tools:text="Player1"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/p1PointsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:freezesText="true"
+                tools:text="5" />
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/versus"
+            android:textSize="45dp" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/p2PointsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold"
+                android:freezesText="true"
+                android:layout_weight="1"
+                tools:text="5" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:gravity="right">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/p2RoundResultTextView"
+                    android:textSize="25dp"
+                    android:layout_alignParentRight="true"
+                    tools:text="WIN!"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/player2CircularImageView"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="3dp"
+                    android:src="@drawable/stock_man_2"
+                    android:layout_below="@id/p2RoundResultTextView"
+                    app:civ_border_color="@color/light_violet"
+                    app:civ_border_width="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name_tag2"
+                    android:layout_below="@+id/player2CircularImageView"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/name_tag_light_violet"
+                    tools:text="Player2"
+                    android:layout_alignParentRight="true"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/gameArea"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/firstRow"
+                android:layout_width="match_parent"
+                android:layout_height="125dp">
+
+                <adu.ae.tictactow.customClasses.CustomButton
+                    android:id="@+id/button_00"
+                    style="@style/gameButton" />
+
+                <FrameLayout
+                    style="@style/verticalGridLine"
+                    android:background="@drawable/top_rounded_border" />
+
+                <adu.ae.tictactow.customClasses.CustomButton
+                    android:id="@+id/button_01"
+                    style="@style/gameButton" />
+
+                <FrameLayout
+                    style="@style/verticalGridLine"
+                    android:background="@drawable/top_rounded_border" />
+
+                <adu.ae.tictactow.customClasses.CustomButton
+                    android:id="@+id/button_02"
+                    style="@style/gameButton" />
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/afterFirstRowLine"
+                style="@style/horizontalGridLine"
+                android:layout_below="@id/firstRow" />
+
+
+            <LinearLayout
+                android:id="@+id/secondRow"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_below="@id/afterFirstRowLine">
+
+
+                <adu.ae.tictactow.customClasses.CustomButton
+                    android:id="@+id/button_10"
+                    style="@style/gameButton" />
+
+                <FrameLayout
+                    style="@style/verticalGridLine"
+                    android:background="@android:color/white" />
+
+                <adu.ae.tictactow.customClasses.CustomButton
+                    android:id="@+id/button_11"
+                    style="@style/gameButton" />
+
+                <FrameLayout
+                    style="@style/verticalGridLine"
+                    android:background="@android:color/white" />
+
+                <adu.ae.tictactow.customClasses.CustomButton
+                    android:id="@+id/button_12"
+                    style="@style/gameButton" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/afterSecondRowLine"
+                style="@style/horizontalGridLine"
+                android:layout_below="@id/secondRow" />
+
+
+            <LinearLayout
+                android:id="@+id/thirdRow"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_below="@id/afterSecondRowLine">
+
+                <adu.ae.tictactow.customClasses.CustomButton
+                    android:id="@+id/button_20"
+                    style="@style/gameButton"
+                    tools:fontFamily="@font/rubik_mono_one"
+                    tools:text="X"
+                    tools:textColor="@color/reddish_pink" />
+
+                <FrameLayout
+                    style="@style/verticalGridLine"
+                    android:background="@drawable/bottom_rounded_border" />
+
+                <adu.ae.tictactow.customClasses.CustomButton
+                    android:id="@+id/button_21"
+                    style="@style/gameButton" />
+
+                <FrameLayout
+                    style="@style/verticalGridLine"
+                    android:background="@drawable/bottom_rounded_border" />
+
+
+                <adu.ae.tictactow.customClasses.CustomButton
+                    android:id="@+id/button_22"
+                    style="@style/gameButton" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/matchEndedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            tools:text="Match Ended" />
+
+        <TextView
+            android:id="@+id/playerWinnerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/matchEndedTextView"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="12dp"
+            android:textSize="15dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            tools:text="Player 1 Won! "
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+

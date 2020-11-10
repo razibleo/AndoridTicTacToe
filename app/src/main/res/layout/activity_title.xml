@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="40dp"
+    android:paddingRight="40dp"
+    android:paddingLeft="40dp"
+    android:paddingBottom="25dp"
+    android:background="@drawable/title_background"
+    tools:context=".activities.TitleActivity"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.cbr.gradienttextview.GradientTextView
+            android:id="@+id/gameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/titan_one"
+            android:textSize="40dp"
+            android:text="@string/tic_tac_toe"
+            app:gt_color_list="@array/rainbow"
+            app:gt_gradient_direction="bottom" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gameTitle"
+            android:gravity="right">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/tic_tac_toe_hand_drawn_game"
+                android:tint="#9AAAB5"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"/>
+
+
+            <com.cbr.gradienttextview.GradientTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/subTitle"
+                android:fontFamily="@font/dancing_script_bold"
+                android:text="@string/with_friends"
+                android:textSize="40dp" />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="8"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:id="@+id/leftArrow"
+            android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+            android:tint="@color/rainbow_yellow"
+            android:layout_weight="1"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/friendsRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:id="@+id/rightArrow"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+            android:tint="@color/rainbow_yellow"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/localCoopButton"
+        style="@style/titleButton"
+        android:text="@string/local_coop" />
+
+    <Button
+        android:id="@+id/singlePlayerButton"
+        style="@style/titleButton"
+        android:text="@string/singleplayer" />
+
+    <Button
+        android:id="@+id/multiplayerButton"
+        style="@style/titleButton"
+        android:text="@string/multiplayer" />
+
+    <Button
+        android:id="@+id/settingsButton"
+        style="@style/titleButton"
+        android:text="@string/settings" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/connectTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sa"
+            android:text="@string/connect_via"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/connectTextView"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_facebook"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_twitter"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_google_plus"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

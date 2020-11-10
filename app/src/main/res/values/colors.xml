@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <color name="rainbow_red">#FF0000</color>
+    <color name="rainbow_orange">#ff8100</color>
+    <color name="rainbow_yellow">#FFFF00</color>
+    <color name="rainbow_green">#00FF00</color>
+    <color name="rainbow_blue">#0000FF</color>
+    <color name="rainbow_indigo">#4B0082</color>
+    <color name="rainbow_violet">#8B00FF</color>
+
+
+    <color name="reddish_pink">#FF9999</color>
+    <color name= "light_violet">#9999FF</color>
+
+</resources>

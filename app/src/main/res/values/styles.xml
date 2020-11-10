@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--parent="Theme.AppCompat.Light.DarkActionBar"-->
+    <style name="AppTheme"  parent="Theme.AppCompat.NoActionBar" >
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="titleButton">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@drawable/title_button_background</item>
+    </style>
+
+    <style name="gameButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:freezesText">true</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name ="android:fontFamily">@font/rubik_mono_one</item>
+    </style>
+
+    <style name="verticalGridLine">
+        <item name="android:layout_width">7dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="horizontalGridLine">
+        <item name="android:background">@drawable/rounded_sides_border</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">7dp</item>
+    </style>
+
+
+</resources>
