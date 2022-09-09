@@ -1,6 +1,6 @@
 # Android Tic Tac Toe
 
-<p>A Tic Toc Toe game with multiplayer functionaly via bluetooth created using Java </p>
+<p>A Tic Toc Toe game with multiplayer functionaly via bluetooth created using Java.</p>
 
 <b>Please Note:</b> Settings(Persistence) and linking via social media have not been implemented
 
